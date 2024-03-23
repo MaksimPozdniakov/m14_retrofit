@@ -41,6 +41,9 @@ android {
 }
 
 dependencies {
+
+    // RoundImageView
+    implementation("com.makeramen:roundedimageview:2.3.0")
     // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0")
     // Glide
