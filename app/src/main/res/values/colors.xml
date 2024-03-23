@@ -3,5 +3,5 @@
     <color name="main_color">#f7f3ed</color>
     <color name="background_card_view_1">#D6C1A6</color>
     <color name="background_card_view_2">#e6daca</color>
-
+    <color name="text_color">#463d61</color>
 </resources>
