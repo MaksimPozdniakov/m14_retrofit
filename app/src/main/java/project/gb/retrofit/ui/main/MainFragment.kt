@@ -29,6 +29,8 @@ class MainFragment : Fragment() {
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
+        viewModel.onSignInClick()
+
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.user.collect {
                 if (it != null) {
