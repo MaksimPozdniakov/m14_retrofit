@@ -29,7 +29,14 @@ class MainFragment : Fragment() {
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
-        viewModel.onSignInClick()
+        // Заполняем данные только если они еще не были инициализированы
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewModel.dataInitialized.collect { initialized ->
+                if (!initialized) {
+                    viewModel.onSignInClick()
+                }
+            }
+        }
 
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.user.collect {

@@ -114,7 +114,7 @@
             android:layout_height="45dp"
             android:layout_marginBottom="35dp"
             android:enabled="@{!viewModel.state.loading}"
-            android:onClick="@{() -> viewModel.onSignInClick()}"
+            android:onClick="@{() -> viewModel.updateData()}"
 
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
