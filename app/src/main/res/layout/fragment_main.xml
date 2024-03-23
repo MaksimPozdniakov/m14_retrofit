@@ -107,8 +107,10 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_reload"
             android:text="Обновить"
+            android:background="@drawable/ripple_animation"
             android:textSize="17sp"
-            android:layout_width="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:layout_width="150dp"
             android:layout_height="45dp"
             android:layout_marginBottom="35dp"
             android:enabled="@{!viewModel.state.loading}"
@@ -126,7 +128,7 @@
             android:layout_marginBottom="10dp"
             android:layout_marginHorizontal="10dp"
             android:indeterminate="true"
-            android:visibility="@{viewModel.state.loading ? View.VISIBLE : View.GONE}"
+            android:visibility="@{viewModel.state.loading ? View.VISIBLE : View.INVISIBLE}"
 
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
